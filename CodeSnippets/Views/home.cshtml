@@ -1,0 +1,19 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+Hello World.
+
+@{
+    if (Model.HasValue("checkboxes"))
+    {
+        <ul>
+            @foreach (var item in Model.Value<IEnumerable<string>>("checkboxes"))
+            {
+                <li>@item</li>
+            }
+        </ul>
+    }
+}
